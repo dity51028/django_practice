@@ -12,6 +12,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='images/')
     date = models.DateField(default=timezone.now)
     product_type = models.CharField(max_length=100, choices=Product_Type)
+    description = models.TextField(default="")
     
     def __str__(self):
         return self.name
